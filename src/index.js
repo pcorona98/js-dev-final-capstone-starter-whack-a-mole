@@ -233,10 +233,18 @@ function whack(event) {
 * Adds the 'click' event listeners to the moles. See the instructions
 * for an example on how to set event listeners using a for loop.
 */
+
+function myPlay(){
+  var audio = new Audio("https://github.com/pcorona98/js-dev-final-capstone-starter-whack-a-mole/blob/main/assets/hit.mp3?raw=true");
+  audio.play();
+}
+
 function setEventListeners(){
   // TODO: Write your code here
 moles.forEach(
   mole => mole.addEventListener('click', whack));
+  moles.forEach(
+  mole => mole.addEventListener('click', myPlay));
   return moles;
 }
 
